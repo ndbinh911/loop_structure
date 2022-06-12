@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Game đoán số</title>
+</head>
+<body>
+    <button id="play" onclick="myFunction()">Chơi</button>
+
+    <script>
+        function myFunction() {
+            let play = document.getElementById('play');
+            let guess = parseFloat(prompt('Nhập vào muốn đoán trong khoảng nào (nhập vào số lớn nhất)'))
+            let i = 1;
+            let ranNum = Math.floor(Math.random() * (guess + 1));
+            let input;
+            console.log(ranNum);
+            do {
+                input = parseFloat(prompt('Nhập giá trị'));
+                console.log( input);
+                i++;
+            } while (i <= 3 && ranNum != input)
+            if (ranNum == input) {
+                alert('Chúc mừng');
+            } else {
+                alert('Bạn đã thất bại');
+            }
+        }
+        </script>
+</body>
+</html>
