@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Luyện tập vòng lặp</title>
+</head>
+<body>
+    <script>
+        let temperature = parseInt(prompt('Nhập vào nhiệt độ:'));
+        while (temperature > 100 || temperature <20) {
+            if (temperature > 100) {
+                temperature = parseInt(prompt('Nhiệt độ quá cao, vui lòng giảm nhiệt độ:'));
+            } if (temperature < 20) {
+                temperature = parseInt(prompt('Nhiệt độ quá thấp, vui lòng tăng nhiệt độ:'));
+            }
+        }
+        alert('Nhiệt độ hiện tại là ' + temperature);
+    </script>
+</body>
+</html>
