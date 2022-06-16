@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Luyện tập vòng lặp</title>
+</head>
+<body>
+    <div>
+        Tổng của 20 số đầu tiên trong dãy fibonacci: <span id="demo"></span>
+    </div>
+    <script>
+        let num1 = 1;
+        let num2 = 1;
+        let i = 3;
+        let num = 2;
+        let total = 0;
+        
+        while (i <= 20) {
+            let demo = document.getElementById('demo').innerHTML = (total += num);
+            console.log(total);
+            num1 = num2;
+            num2 = num;
+            num = num1 + num2;
+            i++;
+        }
+    </script>
+</body>
+</html>
